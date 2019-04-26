@@ -8,15 +8,15 @@ TrajectoryPlannerROS:
   pdist_scale: 0.5
   gdist_scale: 1.0
 
-  max_vel_x: 0.5
-  min_vel_x: 0.1
-  max_vel_theta: 2.0
+  max_vel_x: 10
+  min_vel_x: 1
+  max_vel_theta: 1.0
 
-  acc_lim_theta: 5.0
-  acc_lim_x: 2.0
-  acc_lim_y: 5.0
+  acc_lim_theta: 1.0
+  acc_lim_x: .5
+  acc_lim_y: .5
 
-  controller_frequency: 15.0
+  controller_frequency: 10.0
 
 
 

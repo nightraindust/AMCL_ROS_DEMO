@@ -1,5 +1,7 @@
 <?xml version='1.0'?>
 
+<!--NOT THIS ONE-->
+
 
 <robot name="udacity_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:include filename="$(find udacity_bot)/urdf/seans_bot.gazebo"/>
@@ -29,14 +31,14 @@
     <collision name='collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/> 
       <geometry>
-        <cylinder radius="0.2" length="0.1"/>
+        <cylinder radius="0.2" length="0.6"/>
       </geometry>
     </collision>
 
     <visual name='chassis_visual'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <cylinder radius="0.2" length="0.1"/>
+        <cylinder radius="0.2" length="0.6"/>
       </geometry>
       <material name="black">
         <color rgba="0 0 0 1"/>
@@ -217,7 +219,7 @@
     <origin xyz="0 0.25 0" rpy="0 0 0"/>
     <child link="left_wheel"/>
     <parent link="chassis"/>
-    <axis xyz="0 1 0" rpy="0 0 0"/>
+    <axis xyz="0 0.1 0" rpy="0 0 0"/>
     <limit effort="10000" velocity="1000"/>
     <joint_properties damping="1.0" friction="1.0"/>
   </joint>
@@ -226,7 +228,7 @@
     <origin xyz="0 -0.25 0" rpy="0 0 0"/>
     <child link="right_wheel"/>
     <parent link="chassis"/>
-    <axis xyz="0 1 0" rpy="0 0 0"/>
+    <axis xyz="0 0.1 0" rpy="0 0 0"/>
     <limit effort="10000" velocity="1000"/>
     <joint_properties damping="1.0" friction="1.0"/>
   </joint>
